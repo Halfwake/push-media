@@ -32,7 +32,7 @@
 
 (defun clear-media ()
   "Clear all media routes."
-  (setf *media-hash* (make-hash-table :test #'equal)))
+  (clrhash *media-hash*))
 
 (defun push-media (name-of-file &key (max-views nil) (seconds-alive nil))
   "Create a new route to the given file on the given server."
